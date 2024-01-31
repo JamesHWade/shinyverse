@@ -1,0 +1,90 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "shinyverse"
+description = "A batteries included opinionated approach to building shiny apps in python"
+authors = [{name = "James Wade", email = "github@jameshwade.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = []
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://jameshwade.github.io/shinyverse"
+Documentation = "https://jameshwade.github.io/shinyverse"
+Changelog = "https://jameshwade.github.io/shinyverse/changelog"
+Repository = "https://github.com/jameshwade/shinyverse"
+Issues = "https://github.com/jameshwade/shinyverse/issues"
+Discussions = "https://github.com/jameshwade/shinyverse/discussions"
+Funding = "https://github.com/sponsors/jameshwade"
+
+[project.scripts]
+shinyverse = "shinyverse.cli:main"
+
+[tool.pdm]
+version = {source = "scm"}
+plugins = [
+    "pdm-multirun",
+]
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+
+[tool.pdm.dev-dependencies]
+duty = ["duty>=0.10"]
+ci-quality = ["shinyverse[duty,docs,quality,typing,security]"]
+ci-tests = ["shinyverse[duty,tests]"]
+docs = [
+    "markdown-callouts>=0.3",
+    "markdown-exec>=1.7",
+    "mkdocs>=1.5",
+    "mkdocs-coverage>=1.0",
+    "mkdocs-gen-files>=0.5",
+    "mkdocs-git-committers-plugin-2>=1.2",
+    "mkdocs-literate-nav>=0.6",
+    "mkdocs-material>=9.4",
+    "mkdocs-minify-plugin>=0.7",
+    "mkdocstrings[python]>=0.23",
+    "tomli>=2.0; python_version < '3.11'",
+]
+maintain = [
+    "git-changelog>=2.3",
+]
+quality = [
+    "ruff>=0.0",
+]
+tests = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "pytest-randomly>=3.15",
+    "pytest-xdist>=3.3",
+]
+typing = [
+    "mypy>=1.5",
+    "types-markdown>=3.5",
+    "types-pyyaml>=6.0",
+]
+security = [
+    "safety>=2.3",
+]

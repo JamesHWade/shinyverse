@@ -1,0 +1,22 @@
+# Changes here will be overwritten by Copier
+_commit: 7ed50df
+_src_path: gh:jameshwade/copier-pdm
+author_email: github@jameshwade.com
+author_fullname: James Wade
+author_username: jameshwade
+copyright_date: '2024'
+copyright_holder: James Wade
+copyright_holder_email: github@jameshwade.com
+copyright_license: MIT License
+insiders: false
+project_description: A batteries included opinionated approach to building shiny apps
+    in python
+project_name: shinyverse
+python_package_command_line_name: shinyverse
+python_package_distribution_name: shinyverse
+python_package_import_name: shinyverse
+repository_name: shinyverse
+repository_namespace: jameshwade
+repository_provider: github.com
+use_precommit: true
+
