@@ -10,7 +10,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 keywords = []
 dynamic = ["version"]
 classifiers = [
@@ -19,8 +19,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -31,6 +29,13 @@ classifiers = [
 ]
 dependencies = [
     "polars>=0.20.6",
+    "shiny>=0.7.0",
+    "shinyswatch>=0.4.2",
+    "htmltools>=0.5.1",
+    "shinywidgets>=0.3.0",
+    "great-tables>=0.2.0",
+    "numpy>=1.26",
+    "scipy>=1.12",
 ]
 
 [project.urls]
@@ -40,7 +45,6 @@ Changelog = "https://jameshwade.github.io/shinyverse/changelog"
 Repository = "https://github.com/jameshwade/shinyverse"
 Issues = "https://github.com/jameshwade/shinyverse/issues"
 Discussions = "https://github.com/jameshwade/shinyverse/discussions"
-Funding = "https://github.com/sponsors/jameshwade"
 
 [project.scripts]
 shinyverse = "shinyverse.cli:main"
@@ -56,3 +60,16 @@ distribution = true
 package-dir = "src"
 editable-backend = "editables"
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "mkdocs-material>=9.5.6",
+    "mkdocs-callouts>=1.10.0",
+    "markdown-exec>=1.8.0",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-literate-nav>=0.6.1",
+    "mkdocs-coverage>=1.0.0",
+    "mkdocstrings>=0.24.0",
+    "mkdocs-git-committers-plugin>=0.2.3",
+    "mkdocs-minify-plugin>=0.8.0",
+    "bandit>=1.7.7",
+]

@@ -72,7 +72,6 @@ extra_css:
 markdown_extensions:
 - attr_list
 - admonition
-- callouts
 - footnotes
 - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -82,62 +81,25 @@ markdown_extensions:
     base_path: [!relative $config_dir]
     check_paths: true
 - pymdownx.superfences
-- pymdownx.tabbed:
-    alternate_style: true
-    slugify: !!python/object/apply:pymdownx.slugs.slugify
-      kwds:
-        case: lower
 - pymdownx.tasklist:
     custom_checkbox: true
 - toc:
     permalink: true
 
 plugins:
+- callouts
 - search
 - markdown-exec
-- gen-files:
-    scripts:
-    - scripts/gen_ref_nav.py
 - literate-nav:
     nav_file: SUMMARY.md
 - coverage
-- mkdocstrings:
-    handlers:
-      python:
-        import:
-        - https://docs.python.org/3/objects.inv
-        paths: [src]
-        options:
-          docstring_options:
-            ignore_init_summary: true
-          docstring_section_style: list
-          filters: ["!^_"]
-          heading_level: 1
-          inherited_members: true
-          merge_init_into_class: true
-          separate_signature: true
-          show_root_heading: true
-          show_root_full_path: false
-          show_signature_annotations: true
-          show_symbol_type_heading: true
-          show_symbol_type_toc: true
-          signature_crossrefs: true
-          summary: true
+- mkdocstrings
 - git-committers:
-    enabled: !ENV [DEPLOY, false]
     repository: jameshwade/shinyverse
-- minify:
-    minify_html: !ENV [DEPLOY, false]
-- group:
-    enabled: !ENV [MATERIAL_INSIDERS, false]
-    plugins:
-    - typeset
 
 extra:
   social:
   - icon: fontawesome/brands/github
     link: https://github.com/jameshwade
-  - icon: fontawesome/brands/gitter
-    link: https://gitter.im/shinyverse/community
   - icon: fontawesome/brands/python
     link: https://pypi.org/project/shinyverse/
