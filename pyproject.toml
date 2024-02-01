@@ -71,11 +71,10 @@ dev = [
     "mkdocs-material>=9.5.6",
     "mkdocs-callouts>=1.10.0",
     "markdown-exec>=1.8.0",
-    "mkdocs-gen-files>=0.5.0",
     "mkdocs-literate-nav>=0.6.1",
     "mkdocs-coverage>=1.0.0",
     "mkdocstrings>=0.24.0",
-    "mkdocs-git-committers-plugin>=0.2.3",
     "mkdocs-minify-plugin>=0.8.0",
     "bandit>=1.7.7",
+    "mkdocs-git-committers-plugin>=0.2.3",
 ]
