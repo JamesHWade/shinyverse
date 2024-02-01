@@ -8,6 +8,8 @@ A batteries included opinionated approach to building shiny apps in python
 
 ## Installation
 
+Note: this package is not yet available on pypi.
+
 With `pip`:
 
 ```bash

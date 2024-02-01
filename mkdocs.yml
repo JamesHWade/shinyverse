@@ -4,9 +4,10 @@ site_url: "https://jameshwade.github.io/shinyverse"
 repo_url: "https://github.com/jameshwade/shinyverse"
 repo_name: "jameshwade/shinyverse"
 site_dir: "site"
+use_directory_urls: false
 watch: [mkdocs.yml, README.md, CONTRIBUTING.md, CHANGELOG.md, src/shinyverse]
 copyright: Copyright &copy; 2024 James Wade
-edit_uri: edit/main/docs/
+edit_uri: edit/main/
 
 validation:
   omitted_files: warn
